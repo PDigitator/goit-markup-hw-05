@@ -18,9 +18,11 @@
   --secondary-bgc: #2f303a;
   --hero-bgc: #c4c4c4;
   --team-bgc: #f5f4fa;
+  --works-bgc: rgba(47, 48, 58, 0.8);
   --footer-logo-bgc: rgba(255, 255, 255, 0.1);
   --header-border-color: #ececec;
   --portfolio-list-item-border-color: #eeeeee;
+  --backdrop-bgc: rgba(0, 0, 0, 0.2);
 
   /* Others */
   --indent: 30px;
@@ -113,6 +115,8 @@ img {
 }
 
 .site-nav.list .link {
+  position: relative;
+
   padding: 32px 0 31px 0;
 
   color: var(--title-text-color);
@@ -129,6 +133,19 @@ img {
 
 .site-nav .link.current {
   color: var(--accent-color);
+}
+
+.link.current::after {
+  content: '';
+
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+
+  background-color: var(--accent-color);
 }
 
 .contacts .list-item:not(:last-child) {
@@ -277,8 +294,32 @@ img {
   align-items: center;
 }
 
+.works .list-item {
+  position: relative;
+}
+
 .works .list-item:not(:last-child) {
   margin-right: 30px;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+  padding-top: 27px;
+  padding-bottom: 27px;
+
+  background-color: var(--works-bgc);
+}
+
+.overlay .text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--secondary-text-color);
 }
 
 /* <!-- Секція Наша команда --> */
