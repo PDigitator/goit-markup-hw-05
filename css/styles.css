@@ -549,8 +549,6 @@ img {
   background-color: var(--backdrop-bgc);
   opacity: 1;
   visibility: visible;
-  /* transform: scale(1); */
-  /* transform var(--anim-cubic),  */
   transition: opacity var(--anim-cubic), visibility var(--anim-cubic);
 }
 
@@ -558,7 +556,6 @@ img {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
-  /* transform: scale(0); */
 }
 
 /* TODO: перевірити padding на наступному ДЗ */
@@ -702,10 +699,12 @@ img {
   height: 100%;
 
   padding: 63px 24px;
+  background-color: var(--portfolio-overlay-bgc);
+  color: var(--secondary-text-color);
   font-size: 18px;
   line-height: calc(28 / 18);
-  color: var(--secondary-text-color);
-  background-color: var(--portfolio-overlay-bgc);
+
+  user-select: none;
 
   transform: translateY(100%);
   transition-property: transform;
