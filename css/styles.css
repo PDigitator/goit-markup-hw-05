@@ -712,7 +712,8 @@ img {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio .link:hover .portfolio-overlay {
+.portfolio .link:hover .portfolio-overlay,
+.portfolio .link:focus .portfolio-overlay {
   transform: translateY(0);
 }
 
