@@ -549,6 +549,7 @@ img {
   background-color: var(--backdrop-bgc);
   opacity: 1;
   visibility: visible;
+  perspective: 600px;
   transition: opacity var(--anim-cubic), visibility var(--anim-cubic);
 }
 
@@ -578,7 +579,7 @@ img {
 
 .backdrop.is-hidden .modal {
   opacity: 0;
-  transform: translate(-50%, -50%) scale(0);
+  transform: translate(-50%, -50%) scale(0) rotateY(90deg);
 }
 
 .close-cross-icon {
