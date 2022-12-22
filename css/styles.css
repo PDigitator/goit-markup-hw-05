@@ -642,7 +642,6 @@ img {
 
 .button.close-cross:hover,
 .button.close-cross:focus {
-  border-color: var(--accent-color);
   color: var(--accent-color);
 }
 /* Секція Портфоліо */
